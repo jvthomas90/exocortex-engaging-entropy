@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Exocortex, an E² product</title>
+	
+	<!-- BootstrapCDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+	
+	<!-- Customized styling -->
+	<!-- <link rel="stylesheet" href="styles.css"> -->
+	<style>
+		/* header {
+			position: fixed;
+			top: 0px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			padding: 20px;
+			background-color: #872bff;
+			transition: padding 300ms ease;
+		}
+
+		header.sticky {
+  			padding: 10px 20px;
+		} */
+
+		/* .bg-secondary{
+		  padding: 1rem;
+		  background-color: rgb(0, 68, 255);
+		} */
+		
+		.navbar {
+    		padding: 1rem;
+			background-color:dodgerblue;
+		}		
+		
+  		.btn-primary:hover {
+    		background-color:mediumorchid;
+  		}
+
+  		.hero-background-img {
+    		position: relative;
+    		background: rgba(0, 0, 0, 0.3); 
+    		padding-top:200px;  
+    		padding-bottom:200px;
+  		}
+  
+		.hero-background-img:after {
+			content: "";
+			position: absolute;
+			background-image: url("jessica-lewis-fJXv46LT7Xk-unsplash.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			opacity: 0.88;
+		}
+	</style>
+
+	<!-- Animations library -->
+	<!-- <script defer src="./rough-notation.iife.js"></script> -->
+
+	<!-- Custom annotations -->
+	<!-- <script defer src="./script.js"></script> -->
+</head>
+
+<body>
+	<!-- <header> -->
+	<!-- NAVBAR -->
+		<nav class="navbar navbar-expand navbar-dark">
+			<img src="exo-logo.png" height="50" width="50" alt="Exocortex logo">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link active" href="#call-to-action">Product Tour<span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link" href="#more-info">Features</a>
+				<a class="nav-item nav-link" href="#Access-and-Contribution">Pricing</a>
+			</div>
+		</nav>
+	<!-- </header> -->
+		
+	<!-- HERO -->
+	<div class="jumbotron hero-background-img text-center">
+		<h1>Exocortex™️</h1>
+		<p class="lead">You brain, externalized!</p>
+		<button class="btn btn-primary" id="call-to-action"><a href="#more-info">Learn more</a></button>
+	</div>
+	
+	<!-- FEATURES -->
+	<div class="container pb-5 pt-5">
+		<div class="row" id="more-info">
+			<div class="col-lg-4">
+				<h3 id="benefit-a">Memory Management</h3>
+				<p class="lead">
+					<em>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</em>
+					Maxime ipsam veniam exercitationem nostrum vitae quas magni temporibus, odit reiciendis? 
+					Impedit doloremque possimus iusto illum nulla itaque perspiciatis dignissimos culpa voluptates?
+				</p>
+			</div>
+			<div class="col-lg-4">
+				<h3 id="benefit-b">Creative Cognition</h3>
+				<p class="lead">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+					<strong>Maxime ipsam veniam exercitationem nostrum vitae quas magni temporibus, odit reiciendis?</strong>
+					Impedit doloremque possimus iusto illum nulla itaque perspiciatis dignissimos culpa voluptates?
+				</p>
+			</div>
+			<div class="col-lg-4">
+				<h3 id="benefit-c">Prioritized Productivity</h3>
+				<p class="lead">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+					Maxime ipsam veniam exercitationem nostrum vitae quas magni temporibus, odit reiciendis? 
+					<mark>Impedit doloremque possimus iusto illum nulla itaque perspiciatis dignissimos culpa voluptates?</mark>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row m-5">
+		<div class="col-lg-6 offset-lg-3">
+		  <!-- <img src="https://images.unsplash.com/photo-1542728949-72f3587c37d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2898&q=80" class="img-fluid rounded"> -->
+		  <div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-w0qEM4i6R8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		  </div>
+		</div>
+	</div>
+	
+	<!-- CALL TO ACTION -->
+	<div class="jumbotron text-center mb-0">
+		<p class="lead mb-4">Sign Up for More Infomation</p>
+		<div class="d-flex justify-content-center">
+		  <form action="#" class='form-inline'>
+			<input type="text" class="form-control mb-2 mr-sm-2" placeholder="Email"/>
+			<button type="submit" class="btn btn-primary mb-2">Submit</button>
+		  </form>
+		</div>
+	</div>
+
+	<!-- JAVASCRIPT ANIMATIONS -->
+	<script type="module">
+		import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
+	
+		const benefit1 = annotate(document.querySelector('#benefit-a'), {type: 'bracket', color: 'dodgerblue', brackets: ['left','right']})
+		const feature1 = annotate(document.querySelector('em'), { type: 'underline', color: 'yellow', multiline:true, animationDuration: 3000});
+		const benefit2 = annotate(document.querySelector('#benefit-b'), {type: 'bracket', color: 'forestgreen', brackets: ['left','right']})
+		const feature2 = annotate(document.querySelector('strong'), { type: 'highlight', color: 'orange', multiline:true, animationDuration: 3000});
+		const benefit3 = annotate(document.querySelector('#benefit-c'), {type: 'bracket', color: 'rebeccapurple', brackets: ['left','right']})
+		const feature3 = annotate(document.querySelector('mark'), { type: 'box', color: 'red', multiline:true, animationDuration: 3000});
+	
+
+		const ag = annotationGroup([benefit1, feature1, benefit2, feature2, benefit3, feature3]);
+		document.querySelector('#call-to-action').addEventListener('click', () => {
+			ag.hide();
+			ag.show();
+    	});
+		
+	  </script>
+</body>
+
+<!-- FOOTER -->
+<footer class="bg-secondary p-5 text-white">
+	<img src="ee4.jpg" height="50" width="50" alt="Engaging Entropy logo">
+	Engaging Entropy Inc. &copy; 2021
+</footer>
+
+</html>
